@@ -1,0 +1,21 @@
+
+public class task1 {
+
+	private static int[] numbers;
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		initArray();
+		System.out.println(numbers.toString());
+	}
+	
+	// Put some numbers into the array
+	private static void initArray(){
+		numbers = new int[] {1,2,3,4,5,6,7,8,9,10};
+	}
+	
+	
+
+}
