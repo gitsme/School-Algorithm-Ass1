@@ -49,26 +49,34 @@ public class Task3 extends Frame {
 		int code = 0;
 		int codeTemp = 0;
 		int lengthTemp = 0;
+		int nStart = 0;
+		int nEnd = 0;
+		int tempStart = 0;
 
 		for (int i = 0; i < arr.size(); i++) {
 			if (codeTemp == arr.get(i)) {
 				lengthTemp++;
 				if (lengthTemp > length) {
+					nStart = tempStart;
+					nEnd = i;
 					code = codeTemp;
 					length = lengthTemp;
 				}
 			} else {
+				tempStart = i;
 				codeTemp = arr.get(i);
-				lengthTemp = 0;
+				lengthTemp = 1;
 			}
 		}
 
 		code = codeToNumb(code);
 		System.out.println("Integer: " + code);
 		System.out.println("Length: " + length);
+		System.out.println("Start: " + nStart + " End: " + nEnd);
 		System.exit(0);
 	}
-
+	
+	
 	// Convert from keyCode to correct numeric value
 	public int codeToNumb(int _code) {
 		if (_code == 49)
@@ -103,5 +111,5 @@ public class Task3 extends Frame {
 			label.setText(arr.toString());
 		}
 	}
-
+	
 }
