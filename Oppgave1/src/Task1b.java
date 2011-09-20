@@ -1,5 +1,5 @@
 /*
- * Orders a permutation of integers 1-N
+ * Orders a permutation of integers -N-N
  */
 
 import java.util.Random;
